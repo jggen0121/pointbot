@@ -1,4 +1,5 @@
 import discord, asyncio, openpyxl, asyncio, random, time #모듈값 불러오기
+import os #모듈값 2
 from discord.ext import commands
 
 client = discord.Client()
@@ -72,5 +73,5 @@ async def on_message(message):
 
 
 
-
-client.run("ODA1MDY0Mjc4NDY5MTE1OTA1.YBVciQ.7twEEsGZOKCtOyuHDfLuBlYK1TA")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
